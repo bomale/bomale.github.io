@@ -1,6 +1,7 @@
 <?php
   /**
   * @see https://bootstrapmade.com/php-email-form/
+  * TODO sicurezza
   */
   use PHPMailer\PHPMailer\PHPMailer;
   use PHPMailer\PHPMailer\Exception;
@@ -15,6 +16,7 @@
   $contact->setLanguage('it');
   $contact->isSMTP();
   $contact->Host = $INFO['host'];
+  $contact->Port = $INFO['port'];
   $contact->SMTPAuth = true;
   $contact->Username = $INFO['username']; 
   $contact->Password = $INFO['password'];
@@ -28,6 +30,7 @@
   /* mail admin */
   $contact->addAddress($INFO['to_mail'], $INFO['to_name']);
   $contact->AddReplyTo($_POST['email'], $_POST['name']);
+  $contact->isHTML(true);
 
   $contact->Body = "<h2>DA: {$_POST['name']}</h2> <p>Richiesta \"{$_POST['subject']}\"</p><br><br><p>{$_POST['message']}</p>";
   $contact->AltBody = "DA {$_POST['name']} \n Richiesta \"{$_POST['subject']}\" \n\n {$_POST['message']}";
