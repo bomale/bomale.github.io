@@ -264,6 +264,16 @@ h1, h2, h3, h4, h5, h6 {
   #hero {
     padding-left: 160px;
   }
+  #hero > span {
+    left: calc(50% - 18px + 50px) !important;
+  }
+}
+
+#hero > span {
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% - 18px);
+  font-size: 36px;
 }
 
 #hero:before {
