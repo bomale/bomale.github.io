@@ -14,3 +14,9 @@ $INFO = [
     'to_name'   => '' //nome che compare nel mittente
 ];
 ```
+
+- [ ] [microdata person](https://schema.org/Person)
+- [ ] completare portfolio
+- [ ] [dark/light mode switcher](https://lukelowrey.com/css-variable-theme-switcher/)
+- [ ] sicurezza file contact.php
+- [x] setup template
