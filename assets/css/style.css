@@ -1,6 +1,21 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+:root {
+  --transform-bg: unset;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+} 
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
@@ -134,8 +149,12 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 992px) {
   #main {
-    margin-left: 100px;
+    padding-left: 100px;
   }
+}
+
+#main {
+  background: white;
 }
 
 /*--------------------------------------------------------------
@@ -255,9 +274,10 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.jpg") top right no-repeat;
-  background-size: cover;
+  /*background: url("../img/hero-bg.jpg") top right no-repeat;
+  background-size: cover;*/
   position: relative;
+  z-index: 0;
 }
 
 @media (min-width: 992px) {
@@ -265,25 +285,28 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 160px;
   }
   #hero > span {
-    left: calc(50% - 18px + 50px) !important;
+    left: calc(50% - 0.5em + 50px) !important;
   }
 }
 
 #hero > span {
   position: absolute;
   bottom: 50px;
-  left: calc(50% - 18px);
-  font-size: 36px;
+  left: calc(50% - 0.5em);
+  font-size: 3em;
+  color: #fff;
 }
 
 #hero:before {
   content: "";
-  background: rgba(255, 255, 255, 0.8);
+  background: linear-gradient(to right, rgba(54, 54, 54, 0.8), rgba(0, 0, 0, 0.8)), url("../img/hero-bg.jpg") top right no-repeat;
+  background-size: auto, cover;
   position: absolute;
   bottom: 0;
   top: 0;
   left: 0;
   right: 0;
+  transform: var(--transform-bg);
 }
 
 #hero h1 {
@@ -291,7 +314,8 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 64px;
   font-weight: 700;
   line-height: 56px;
-  color: #45505b;
+  color: #ffffff;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.35);
 }
 
 #hero p {
@@ -313,7 +337,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero .social-links a {
   font-size: 24px;
   display: inline-block;
-  color: #45505b;
+  color: #cacaca;
   line-height: 1;
   margin-right: 20px;
   transition: 0.3s;
@@ -1193,12 +1217,3 @@ section {
 #footer .credits {
   font-size: 13px;
 }
-*::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-* {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-} 

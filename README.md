@@ -15,8 +15,10 @@ $INFO = [
 ];
 ```
 
+- [ ] Privacy Policy form contact.php
 - [ ] [microdata person](https://schema.org/Person)
 - [ ] completare portfolio
 - [ ] [dark/light mode switcher](https://lukelowrey.com/css-variable-theme-switcher/)
-- [ ] sicurezza file contact.php
+- [x] sicurezza file contact.php
 - [x] setup template
+- [ ] [caricare tutto in live bomale.io](bomale.io)
