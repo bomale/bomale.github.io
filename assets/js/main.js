@@ -276,7 +276,9 @@ onIntersect = (entries) => {
         height = entry.target.clientHeight,
         opacityValue = (height - (scrollY > height ? height : scrollY)) / height;
 
-    [...entry.target.children].forEach(function(elm){
+    [...entry.target.children]
+    .filter(e => e.classList.contains('Bparallax'))
+    .forEach(function(elm){
       elm.style.opacity = opacityValue;
       elm.style.transitionDelay = '0s';
       elm.style.transform = 'translateY('+ scrollY / 2 +'px)';
