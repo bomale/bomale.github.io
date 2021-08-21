@@ -266,21 +266,21 @@
 var options = {
   root: null,
   rootMargin: "0px",
-  threshold: [...Array(100)].map((_, i) => 0 + i * .01)
+  threshold: [...Array(1000)].map((_, i) => 0 + i * .001)
 },
 onIntersect = (entries) => {
   entries
   .filter(entry => entry.isIntersecting)
   .forEach((entry) => {
-      var scrollY = window.scrollY,
+    var scrollY = window.scrollY,
         height = entry.target.clientHeight,
         opacityValue = (height - (scrollY > height ? height : scrollY)) / height;
-        
-      [...entry.target.children].forEach(function(elm){
-        elm.style.opacity = opacityValue;
-        elm.style.transitionDelay = '0s';
-        elm.style.transform = 'translateY('+ scrollY / 2 +'px)';
-      });
+
+    [...entry.target.children].forEach(function(elm){
+      elm.style.opacity = opacityValue;
+      elm.style.transitionDelay = '0s';
+      elm.style.transform = 'translateY('+ scrollY / 2 +'px)';
+    });
   });
 },
 observer = new IntersectionObserver(onIntersect, options);
