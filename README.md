@@ -21,4 +21,4 @@ $INFO = [
 - [ ] [dark/light mode switcher](https://lukelowrey.com/css-variable-theme-switcher/)
 - [x] sicurezza file contact.php
 - [x] setup template
-- [ ] [caricare tutto in live bomale.io](bomale.io)
+- [ ] [caricare tutto in live bomale.io](https://bomale.io)
