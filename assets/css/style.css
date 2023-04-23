@@ -15,7 +15,13 @@ html {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 } 
-
+body,html {
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+}
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
